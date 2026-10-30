@@ -1,0 +1,35 @@
+/* ===== VARIABLES DE DISEÑO (colores, tipografía, espacios) ===== */
+:root {
+    /* Colores de marca */
+    --navy-900: #0a0e1f;
+    --navy-800: #0e1224;
+    --navy-700: #161b34;
+    --navy-600: #1f2650;
+    --gold: #d4af37;
+    --gold-light: #f0d98a;
+    --gold-dark: #a8861c;
+    --ivory: #fbf8f1;
+    --white: #ffffff;
+    --ink: #1b1f3a;
+    --muted: #5d6385;
+    --muted-light: #b8bdd6;
+    --rose: #c9506f;
+    --line: rgba(27, 31, 58, 0.12);
+    --line-light: rgba(255, 255, 255, 0.14);
+    --whatsapp: #25d366;
+    --whatsapp-dark: #1da851;
+
+    /* Tipografía */
+    --font-title: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body: 'Montserrat', 'Segoe UI', Tahoma, Arial, sans-serif;
+
+    /* Medidas */
+    --radius: 20px;
+    --radius-sm: 12px;
+    --header-h: 72px;
+    --container: 1160px;
+    --shadow-sm: 0 4px 14px rgba(14, 18, 36, 0.08);
+    --shadow-md: 0 14px 40px rgba(14, 18, 36, 0.14);
+    --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.35);
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

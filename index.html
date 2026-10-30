@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0e1f">
+    <title>INVITA-EXPRO · Invitaciones digitales para fiestas de expromociones</title>
+    <meta name="description" content="INVITA-EXPRO: invitaciones digitales personalizadas para fiestas de expromociones, reencuentros de promociones y celebraciones entre antiguos compañeros.">
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+<!-- ============ ICONOS (se reutilizan con <use>) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-10 10.01-3-3.01"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
+    <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35M11 8v6M8 11h6"/></symbol>
+    <symbol id="i-tick" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17l.7 1.8 1.8.7-1.8.7L19 22l-.7-1.8-1.8-.7 1.8-.7z"/></symbol>
+</svg>
+
+<!-- ============ ENCABEZADO ============ -->
+<header class="site-header" id="header">
+    <div class="container header-inner">
+        <a href="#inicio" class="brand" aria-label="INVITA-EXPRO, ir al inicio">
+            <img src="assets/img/logo.svg" alt="" width="40" height="40">
+            <span class="brand-name">INVITA-<span>EXPRO</span></span>
+        </a>
+
+        <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="#inicio">Inicio</a></li>
+                <li><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                <li><a class="nav-link" href="#invitaciones">Invitaciones</a></li>
+                <li><a class="nav-link" href="#ejemplo">Ejemplo</a></li>
+                <li><a class="nav-link" href="#como-funciona">Cómo funciona</a></li>
+                <li><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+            <a href="#contacto" class="btn btn-gold nav-cta-mobile">Solicitar invitación</a>
+        </nav>
+
+        <div class="header-cta">
+            <a href="#contacto" class="btn btn-gold btn-sm">Solicitar invitación</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+                <span class="bars"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+    <div class="container hero-inner">
+        <div class="hero-copy">
+            <span class="eyebrow reveal"><svg class="icon" width="14" height="14"><use href="#i-sparkle"/></svg> Invitaciones digitales</span>
+            <h1 class="reveal" style="--d:.08s">¡Los mejores recuerdos merecen una <em>invitación especial!</em></h1>
+            <p class="hero-text reveal" style="--d:.16s">
+                Revive los momentos inolvidables de tu promoción con invitaciones digitales únicas y personalizadas. Celebra los reencuentros, comparte la alegría de volver a reunirte con tus compañeros y convierte cada celebración en un recuerdo especial.
+            </p>
+            <div class="hero-actions reveal" style="--d:.24s">
+                <a href="#invitaciones" class="btn btn-gold btn-lg">Explorar invitaciones</a>
+                <a href="#contacto" class="btn btn-ghost btn-lg">Solicitar mi invitación</a>
+            </div>
+            <ul class="hero-trust reveal" style="--d:.32s">
+                <li><svg class="icon"><use href="#i-tick"/></svg> 100 % digitales</li>
+                <li><svg class="icon"><use href="#i-tick"/></svg> Personalizadas</li>
+                <li><svg class="icon"><use href="#i-tick"/></svg> Atención por WhatsApp</li>
+            </ul>
+        </div>
+        <div class="hero-visual reveal" style="--d:.2s">
+            <img src="assets/img/hero-ilustracion.svg" alt="Sobre con una invitación digital elegante" width="480" height="440">
+        </div>
+    </div>
+</section>
+
+<!-- ============ NOSOTROS ============ -->
+<section class="section section-white" id="nosotros">
+    <div class="container about-grid">
+        <div class="about-visual reveal">
+            <!-- Ilustración: grupo de antiguos compañeros celebrando -->
+            <svg viewBox="0 0 500 400" role="img" aria-label="Antiguos compañeros celebrando juntos">
+                <defs>
+                    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6e29a"/><stop offset="1" stop-color="#c9a227"/></linearGradient>
+                </defs>
+                <g fill="#d4af37" opacity=".9">
+                    <path d="M70 70l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
+                    <path d="M420 60l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" opacity=".8"/>
+                    <path d="M250 38l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" opacity=".7"/>
+                </g>
+                <g>
+                    <rect x="130" y="40" width="9" height="16" rx="2" fill="#e07a9a" transform="rotate(25 134 48)"/>
+                    <rect x="360" y="90" width="9" height="16" rx="2" fill="#6fb7e8" transform="rotate(-30 364 98)"/>
+                    <circle cx="190" cy="100" r="5" fill="#f3dc8f"/>
+                    <circle cx="330" cy="50" r="4" fill="#e07a9a"/>
+                    <circle cx="460" cy="150" r="5" fill="#6fb7e8"/>
+                </g>
+                <!-- personas -->
+                <g>
+                    <g transform="translate(105 150)">
+                        <circle cx="0" cy="0" r="26" fill="#f1c9a5"/><path d="M-26 -4a26 26 0 0 1 52 0c-8-12-44-12-52 0z" fill="#2b2f55"/>
+                        <path d="M-40 130V70a40 40 0 0 1 80 0v60z" fill="#c9506f"/>
+                        <path d="M-40 80-70 40" stroke="#c9506f" stroke-width="18" stroke-linecap="round"/>
+                    </g>
+                    <g transform="translate(205 128)">
+                        <circle r="28" fill="#e2b48c"/><path d="M-28 -6a28 28 0 0 1 56 0c-8-14-48-14-56 0z" fill="#1a2048"/>
+                        <path d="M-44 152V76a44 44 0 0 1 88 0v76z" fill="url(#g1)"/>
+                        <path d="M44 70 78 22" stroke="url(#g1)" stroke-width="20" stroke-linecap="round"/>
+                        <rect x="-20" y="-52" width="40" height="8" rx="2" fill="#0e1224"/><path d="M-30 -48 0 -62l30 14-30 12z" fill="#0e1224"/>
+                    </g>
+                    <g transform="translate(305 142)">
+                        <circle r="27" fill="#f1c9a5"/><path d="M-27 4a27 27 0 0 1 54 0v26c0 6-4 10-8 10v-24c-12-8-34-8-38 0v24c-4 0-8-4-8-10z" fill="#5b3a8f"/>
+                        <path d="M-42 138V74a42 42 0 0 1 84 0v64z" fill="#3aa7b3"/>
+                        <path d="M-42 76-72 30" stroke="#3aa7b3" stroke-width="19" stroke-linecap="round"/>
+                    </g>
+                    <g transform="translate(400 160)">
+                        <circle r="25" fill="#d9a67a"/><path d="M-25 -4a25 25 0 0 1 50 0c-8-12-42-12-50 0z" fill="#241a3a"/>
+                        <path d="M-38 120V68a38 38 0 0 1 76 0v52z" fill="#f6f1e4"/>
+                        <path d="M38 70 64 32" stroke="#f6f1e4" stroke-width="17" stroke-linecap="round"/>
+                    </g>
+                </g>
+                <rect x="0" y="290" width="500" height="110" fill="#0a0e1f" opacity=".55"/>
+            </svg>
+            <div class="about-badge"><strong>Reencuentros</strong>que se sienten desde la invitación</div>
+        </div>
+
+        <div class="about-content reveal" style="--d:.1s">
+            <span class="section-kicker">Sobre INVITA-EXPRO</span>
+            <h2>Creamos invitaciones para volver a encontrarnos</h2>
+            <p>
+                En INVITA-EXPRO creemos que cada reencuentro merece una presentación especial. Por eso ofrecemos invitaciones digitales personalizadas para fiestas de expromociones, encuentros de promociones y celebraciones entre antiguos compañeros. Nuestro objetivo es ayudarte a transmitir la emoción de volver a compartir momentos inolvidables mediante diseños atractivos y personalizados.
+            </p>
+            <ul class="values">
+                <li class="value"><svg class="icon"><use href="#i-heart"/></svg>Amistad</li>
+                <li class="value"><svg class="icon"><use href="#i-cap"/></svg>Recuerdos</li>
+                <li class="value"><svg class="icon"><use href="#i-star"/></svg>Elegancia</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============ INVITACIONES ============ -->
+<section class="section" id="invitaciones">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-kicker">Catálogo</span>
+            <h2>Invitaciones digitales para ocasiones especiales</h2>
+            <p>Encuentra el estilo ideal para anunciar tu celebración y compartir la emoción de un nuevo reencuentro.</p>
+        </div>
+
+        <div class="cards-grid">
+            <article class="card c-1 reveal">
+                <div class="card-media"><svg class="icon"><use href="#i-cap"/></svg></div>
+                <div class="card-body">
+                    <h3>Fiestas de expromociones</h3>
+                    <p>Invitaciones para la gran fiesta donde se reúnen todas las promociones.</p>
+                    <button class="btn btn-outline btn-sm" data-categoria="Fiestas de expromociones">Ver diseños</button>
+                </div>
+            </article>
+            <article class="card c-2 reveal" style="--d:.08s">
+                <div class="card-media"><svg class="icon"><use href="#i-users"/></svg></div>
+                <div class="card-body">
+                    <h3>Reencuentros de promociones</h3>
+                    <p>Para volver a abrazar a tus compañeros de curso después de los años.</p>
+                    <button class="btn btn-outline btn-sm" data-categoria="Reencuentros de promociones">Ver diseños</button>
+                </div>
+            </article>
+            <article class="card c-3 reveal" style="--d:.16s">
+                <div class="card-media"><svg class="icon"><use href="#i-calendar"/></svg></div>
+                <div class="card-body">
+                    <h3>Aniversarios de promoción</h3>
+                    <p>Celebra cinco, diez o veinte años de haber egresado juntos.</p>
+                    <button class="btn btn-outline btn-sm" data-categoria="Aniversarios de promoción">Ver diseños</button>
+                </div>
+            </article>
+            <article class="card c-4 reveal">
+                <div class="card-media"><svg class="icon"><use href="#i-heart"/></svg></div>
+                <div class="card-body">
+                    <h3>Encuentros de antiguos compañeros</h3>
+                    <p>Reuniones íntimas entre amigos que comparten una misma historia.</p>
+                    <button class="btn btn-outline btn-sm" data-categoria="Encuentros de antiguos compañeros">Ver diseños</button>
+                </div>
+            </article>
+            <article class="card c-5 reveal" style="--d:.08s">
+                <div class="card-media"><svg class="icon"><use href="#i-star"/></svg></div>
+                <div class="card-body">
+                    <h3>Celebraciones especiales</h3>
+                    <p>Premiaciones, homenajes y noches de gala para momentos únicos.</p>
+                    <button class="btn btn-outline btn-sm" data-categoria="Celebraciones especiales">Ver diseños</button>
+                </div>
+            </article>
+            <article class="card c-6 reveal" style="--d:.16s">
+                <div class="card-media"><svg class="icon"><use href="#i-pen"/></svg></div>
+                <div class="card-body">
+                    <h3>Eventos personalizados</h3>
+                    <p>¿Tienes otra idea? Cuéntanos tu evento y lo adaptamos a tu estilo.</p>
+                    <button class="btn btn-outline btn-sm" data-categoria="Eventos personalizados">Ver diseños</button>
+                </div>
+            </article>
+        </div>
+
+        <!-- Zona preparada para el catálogo completo (siguiente etapa) -->
+        <div class="catalog-zone reveal" id="catalogo">
+            <span class="catalog-selected" id="catalog-selected" hidden></span>
+            <h3>Catálogo completo en preparación</h3>
+            <p>Muy pronto podrás ver aquí todos los diseños de cada categoría. Mientras tanto, cuéntanos qué estilo buscas y te mostramos los modelos disponibles.</p>
+            <a class="btn btn-dark" id="catalog-wa" data-wa href="#contacto" target="_blank" rel="noopener">
+                <svg class="icon"><use href="#i-chat"/></svg> Consultar modelos por WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ EJEMPLO (solo código QR) ============ -->
+<section class="section section-dark" id="ejemplo">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-kicker">Demostración</span>
+            <h2>Conoce cómo puede lucir tu invitación</h2>
+            <p>Descubre un ejemplo de invitación digital y conoce cómo presentamos los detalles de una celebración especial.</p>
+        </div>
+
+        <div class="example-center reveal">
+            <div class="qr-stage" id="example-qr">
+                <div class="qr-slot" id="qr-slot">
+                    <img id="example-qr-img" alt="Código QR para abrir el ejemplo de invitación" width="260" height="260" hidden>
+                    <!-- Se oculta solo cuando existe assets/ejemplo/qr-ejemplo.* -->
+                    <div class="qr-placeholder" id="qr-placeholder">
+                        <svg class="icon"><use href="#i-image"/></svg>
+                        <strong>Aquí irá el código QR</strong>
+                        <code>assets/ejemplo/qr-ejemplo.png</code>
+                    </div>
+                </div>
+                <p class="qr-caption"><strong>Míralo en tu celular</strong>Escanea el código QR para abrir el ejemplo de invitación.</p>
+            </div>
+
+            <div class="example-actions">
+                <a class="btn btn-gold" id="example-live" href="#ejemplo" target="_blank" rel="noopener" hidden>Abrir ejemplo en vivo</a>
+                <a class="btn btn-ghost" href="#contacto" data-wa data-wa-msg="example" target="_blank" rel="noopener">Quiero una invitación como esta</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA ============ -->
+<section class="section" id="como-funciona">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-kicker">Proceso</span>
+            <h2>Solicitar tu invitación es muy sencillo</h2>
+            <p>Cuatro pasos para tener una invitación digital lista para compartir.</p>
+        </div>
+
+        <div class="steps">
+            <div class="step reveal">
+                <div class="step-icon"><svg class="icon"><use href="#i-search"/></svg><span class="step-num">1</span></div>
+                <h3>Explora</h3>
+                <p>Conoce nuestros modelos y descubre diferentes estilos de invitaciones digitales.</p>
+            </div>
+            <div class="step reveal" style="--d:.1s">
+                <div class="step-icon"><svg class="icon"><use href="#i-check"/></svg><span class="step-num">2</span></div>
+                <h3>Elige</h3>
+                <p>Selecciona el diseño que más te guste para tu fiesta de expromoción.</p>
+            </div>
+            <div class="step reveal" style="--d:.2s">
+                <div class="step-icon"><svg class="icon"><use href="#i-file"/></svg><span class="step-num">3</span></div>
+                <h3>Comparte tus detalles</h3>
+                <p>Proporciona la información de tu evento, como la fecha, hora, lugar y nombre de tu promoción.</p>
+            </div>
+            <div class="step reveal" style="--d:.3s">
+                <div class="step-icon"><svg class="icon"><use href="#i-chat"/></svg><span class="step-num">4</span></div>
+                <h3>Solicita por WhatsApp</h3>
+                <p>Envíanos tu solicitud directamente por WhatsApp para coordinar la elaboración de tu invitación personalizada.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section section-white" id="contacto">
+    <div class="container">
+        <div class="contact-box reveal">
+            <span class="eyebrow"><svg class="icon" width="14" height="14"><use href="#i-sparkle"/></svg> Solicita tu invitación</span>
+            <h2>¿Estás preparando tu fiesta de expromoción?</h2>
+            <p>Cuéntanos sobre tu celebración y solicita una invitación digital personalizada. Nuestro equipo estará disponible para recibir los detalles de tu evento y ayudarte con tu solicitud.</p>
+            <a class="btn btn-whatsapp btn-lg" data-wa href="#contacto" target="_blank" rel="noopener">
+                <svg class="icon"><use href="#i-chat"/></svg> Solicitar por WhatsApp
+            </a>
+            <p class="contact-note">Se abrirá WhatsApp con un mensaje listo. Podrás revisarlo y enviarlo tú mismo.</p>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#inicio" class="brand">
+                    <img src="assets/img/logo.svg" alt="" width="40" height="40">
+                    <span class="brand-name">INVITA-<span>EXPRO</span></span>
+                </a>
+                <p>INVITA-EXPRO: invitaciones digitales para fiestas de expromociones.</p>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Navegación</h4>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#invitaciones">Invitaciones</a></li>
+                    <li><a href="#ejemplo">Ejemplo</a></li>
+                    <li><a href="#como-funciona">Cómo funciona</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Contacto</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <svg class="icon"><use href="#i-phone"/></svg>
+                        <div><small>WhatsApp</small><span id="footer-whatsapp" class="placeholder-text">[AGREGAR NÚMERO DE WHATSAPP AQUÍ]</span></div>
+                    </li>
+                    <li>
+                        <svg class="icon"><use href="#i-mail"/></svg>
+                        <!-- ESPACIO RESERVADO PARA EL CORREO: se edita en js/config.js -->
+                        <div><small>Correo electrónico</small><span id="footer-email" class="placeholder-text">[AGREGAR CORREO ELECTRÓNICO AQUÍ]</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 INVITA-EXPRO. Todos los derechos reservados.</div>
+    </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

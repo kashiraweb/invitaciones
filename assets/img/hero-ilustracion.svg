@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" role="img" aria-label="Sobre con una invitación digital">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#d4af37" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#d4af37" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6e29a"/>
+      <stop offset="1" stop-color="#c9a227"/>
+    </linearGradient>
+    <linearGradient id="env" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a3263"/>
+      <stop offset="1" stop-color="#1a2048"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="14" stdDeviation="14" flood-color="#000" flood-opacity=".45"/>
+    </filter>
+  </defs>
+
+  <circle cx="240" cy="220" r="210" fill="url(#glow)"/>
+
+  <!-- tarjeta que sale del sobre -->
+  <g transform="rotate(-6 240 200)" filter="url(#sh)">
+    <rect x="130" y="60" width="220" height="250" rx="12" fill="#fbf6e9"/>
+    <rect x="144" y="74" width="192" height="222" rx="8" fill="none" stroke="#d4af37" stroke-width="1.5"/>
+    <circle cx="240" cy="116" r="16" fill="none" stroke="#d4af37" stroke-width="2"/>
+    <path d="M240 105l3 6.3 6.8 1-5 4.8 1.2 6.8-6-3.2-6 3.2 1.2-6.8-5-4.8 6.8-1z" fill="#d4af37"/>
+    <rect x="180" y="152" width="120" height="9" rx="4.5" fill="#1a2048" opacity=".85"/>
+    <rect x="198" y="172" width="84" height="6" rx="3" fill="#1a2048" opacity=".4"/>
+    <rect x="164" y="204" width="152" height="5" rx="2.5" fill="#1a2048" opacity=".25"/>
+    <rect x="172" y="218" width="136" height="5" rx="2.5" fill="#1a2048" opacity=".25"/>
+    <rect x="184" y="232" width="112" height="5" rx="2.5" fill="#1a2048" opacity=".25"/>
+    <rect x="200" y="256" width="80" height="22" rx="11" fill="url(#gold)"/>
+  </g>
+
+  <!-- sobre -->
+  <g filter="url(#sh)">
+    <rect x="90" y="215" width="300" height="180" rx="14" fill="url(#env)"/>
+    <path d="M90 229 240 330 390 229" fill="none" stroke="#d4af37" stroke-width="2.5" stroke-linejoin="round" opacity=".8"/>
+    <path d="M90 395 215 295M390 395 265 295" stroke="#d4af37" stroke-width="2" opacity=".35"/>
+    <circle cx="240" cy="332" r="22" fill="url(#gold)"/>
+    <path d="M240 320l3.4 7 7.6 1.1-5.5 5.4 1.3 7.6-6.8-3.6-6.8 3.6 1.3-7.6-5.5-5.4 7.6-1.1z" fill="#1a2048"/>
+  </g>
+
+  <!-- destellos -->
+  <g fill="#d4af37">
+    <path d="M78 110l5 12 12 5-12 5-5 12-5-12-12-5 12-5z"/>
+    <path d="M410 80l4 9 9 4-9 4-4 9-4-9-9-4 9-4z" opacity=".85"/>
+    <path d="M420 250l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" opacity=".7"/>
+    <path d="M60 300l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" opacity=".6"/>
+  </g>
+  <!-- confeti -->
+  <g>
+    <rect x="360" y="40" width="10" height="18" rx="2" fill="#e07a9a" transform="rotate(25 365 49)"/>
+    <rect x="110" y="40" width="9" height="16" rx="2" fill="#6fb7e8" transform="rotate(-30 114 48)"/>
+    <rect x="445" y="170" width="9" height="16" rx="2" fill="#f3dc8f" transform="rotate(40 449 178)"/>
+    <rect x="30" y="200" width="9" height="16" rx="2" fill="#e07a9a" transform="rotate(-20 34 208)"/>
+    <circle cx="300" cy="30" r="5" fill="#6fb7e8"/>
+    <circle cx="40" cy="140" r="4" fill="#f3dc8f"/>
+    <circle cx="440" cy="330" r="5" fill="#e07a9a"/>
+  </g>
+</svg>
